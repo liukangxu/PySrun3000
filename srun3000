@@ -1,0 +1,16 @@
+#!/bin/sh /etc/rc.common
+
+START=90
+STOP=15
+
+boot() {
+	start
+}
+
+start() {
+	/usr/sbin/srun3000.py &
+}
+
+stop() {
+	killall srun3000.py
+}
